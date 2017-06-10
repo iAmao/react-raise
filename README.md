@@ -1,4 +1,6 @@
 # react-raise
+[![Coverage Status](https://coveralls.io/repos/github/andela-iamao/react-raise/badge.svg)](https://coveralls.io/github/andela-iamao/react-raise) [![Build Status](https://travis-ci.org/andela-iamao/react-raise.svg?branch=master)](https://travis-ci.org/andela-iamao/react-raise) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-iamao/react-raise/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/andela-iamao/react-raise/?branch=master)
+
 A cli kit for creating react applications
 
 ### Why use this?
