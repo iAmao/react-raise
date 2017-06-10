@@ -1,0 +1,36 @@
+{
+  "name": "react-raise",
+  "version": "1.0.0",
+  "description": "a react cli starter kit that bootstraps a react application",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=html --reporter=text mocha --require test/helper test/*.spec.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-iamao/react-raise.git"
+  },
+  "keywords": [
+    "react",
+    "react-raise",
+    "raise",
+    "js",
+    "npm",
+    "easy",
+    "start",
+    "bootstrap"
+  ],
+  "author": "Inumidun Amao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela-iamao/react-raise/issues"
+  },
+  "homepage": "https://github.com/andela-iamao/react-raise#readme",
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "coveralls": "^2.13.1",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.2"
+  }
+}
