@@ -7,3 +7,6 @@
 #### What is the expected behavior?
 
 #### Which versions of react-raise, and which browser / OS are affected by this issue? Did this work in previous versions of  react-raise?
+
+
+###### NB: You can drop a comment below for more clarification
