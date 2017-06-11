@@ -14,7 +14,7 @@ describe('Index', () => {
   describe('init', () => {
     it('should start the commnd with a set of questions', (done) => {
        const currentProps  = Object.assign({}, reactRaise.privateProps);
-       bddStdin('my desc','\n', 'main.js', '\n', 'ash', '\n', 'ISC', '\n', 'y', '\n');
+       bddStdin('m','\n', 'm', '\n', 'a', '\n', 'I', '\n', 'y', '\n');
        reactRaise.init(() => {
         expect(currentProps).to.not.eql(reactRaise.privateProps);
         done();
