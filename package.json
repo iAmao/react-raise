@@ -4,7 +4,7 @@
   "description": "a react cli starter kit that bootstraps a react application",
   "main": "index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha --require test/helper test/*.spec.js",
+    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --require test/helper test/**/*.spec.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
@@ -26,15 +26,31 @@
   "bugs": {
     "url": "https://github.com/andela-iamao/react-raise/issues"
   },
+  "nyc": {
+    "exclude": [
+      "index.js"
+    ]
+  },
   "homepage": "https://github.com/andela-iamao/react-raise#readme",
   "devDependencies": {
     "babel-eslint": "^7.2.3",
+    "bdd-stdin": "^0.2.0",
     "chai": "^4.0.2",
     "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
     "mocha": "^3.4.2",
-    "nyc": "^11.0.2"
+    "nyc": "^11.0.2",
+    "sinon": "^2.3.4"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "clear": "0.0.1",
+    "clui": "^0.3.1",
+    "figlet": "^1.2.0",
+    "inquirer": "^3.1.0",
+    "lodash": "^4.17.4",
+    "touch": "^1.0.0"
   }
 }
