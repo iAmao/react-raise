@@ -12,6 +12,10 @@ module.exports = {
     'redux-thunk': '^2.2.0',
     webpack: '^2.6.1'
   },
+  express: {
+    express: '4.15.2',
+    'body-parser': '1.17.1'
+  },
   devDependencies: {
     'babel-eslint': '^7.2.3',
     'babel-loader': '^7.0.0',

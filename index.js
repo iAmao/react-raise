@@ -1,5 +1,5 @@
-function index () {
-    return true;
-}
+const ReactRaise = require('./lib/ReactRaise');
 
-module.exports = index;
+const app = new ReactRaise();
+
+app.init();
