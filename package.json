@@ -4,7 +4,7 @@
   "description": "a react cli starter kit that bootstraps a react application",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha -w --require test/helper test/**/*.spec.js",
+    "test": "NODE_ENV=test nyc --reporter=html --reporter=text mocha --require test/helper test/**/*.spec.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
