@@ -24,5 +24,14 @@ module.exports = [
       { images: ['images.txt'] },
       'index.html'
     ]
+  },
+  {
+    test: [
+      { actions: ['actionTypes.spec.js'] },
+      { reducers: ['root.reducer.spec.js'] },
+      { components: ['Home.component.spec.js'] },
+      { e2e: ['e2e.txt'] },
+      'helper.js'
+    ]
   }
 ];
