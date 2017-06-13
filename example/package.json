@@ -1,13 +1,13 @@
 {
   "version": "1.0.0",
-  "description": "React app",
-  "main": "index.js",
+  "description": "m",
+  "main": "m",
   "scripts": {
     "test": ""
   },
   "keywords": [],
-  "author": "emma",
-  "license": "MIT",
+  "author": "a",
+  "license": "I",
   "dependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.24.1",
