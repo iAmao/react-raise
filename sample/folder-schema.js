@@ -3,7 +3,7 @@ module.exports = [
     src: [
       {
         components: [
-          { common: ['Button.component.jsx'] },
+          { common: ['Common.component.jsx'] },
           { static: ['About.component.jsx'] },
           'Routes.component.jsx',
           'Home.component.jsx'
