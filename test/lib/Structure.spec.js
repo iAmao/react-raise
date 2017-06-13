@@ -15,7 +15,7 @@ describe('Structure', () => {
     ];
 
     beforeEach((done) => {
-      structure = new Structure('test/lib');
+      structure = new Structure('test/lib/example');
       mkdirp.sync(path.join(__dirname, `example`));
       done();
     });

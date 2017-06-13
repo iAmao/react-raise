@@ -9,7 +9,7 @@ const baseDir = require('../../lib/baseDir');
 describe('Generate', () => {
     let generate;
     beforeEach((done) => {
-      generate = new Generate('test/lib');
+      generate = new Generate('test/lib/example');
       mkdirp.sync(path.join(__dirname, `example`),  (err) => {
         if (err) {
           done(err);

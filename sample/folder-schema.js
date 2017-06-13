@@ -12,6 +12,7 @@ module.exports = [
       { actions: ['actionTypes.js'] },
       { reducers: ['root.reducer.js'] },
       { utils: ['helper.js'] },
+      { styles: ['style.less', 'style.scss'] },
       'index.jsx',
       'store.js'
     ]
@@ -31,7 +32,7 @@ module.exports = [
       { reducers: ['root.reducer.spec.js'] },
       { components: ['Home.component.spec.js'] },
       { e2e: ['e2e.txt'] },
-      'helper.js'
+      'mocha-helper.js'
     ]
   }
 ];
