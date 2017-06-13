@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import store from './store';
 import Routes from './components/Routes.component';
 
-require('./sass/style.scss');
-require('./sass/style.less');
+require('./styles/style.scss');
+require('./styles/style.less');
 
 
 ReactDom.render(

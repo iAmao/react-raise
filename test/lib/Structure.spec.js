@@ -15,7 +15,7 @@ describe('Structure', () => {
     ];
 
     beforeEach((done) => {
-      structure = new Structure('test/lib');
+      structure = new Structure('test/lib/example');
       mkdirp.sync(path.join(__dirname, `example`));
       done();
     });
@@ -50,11 +50,11 @@ describe('Structure', () => {
         structure.build(scheme);
         setTimeout(() => {
           expect(baseDir.directoryExists(
-            path.join(__dirname, '/example/test/helper.js'))).to.eql(true);
+            path.join(__dirname, '/example/test/mocha-helper.js'))).to.eql(true);
           expect(baseDir.directoryExists(
             path.join(__dirname, '/example/src/store.js'))).to.eql(true);
           done();
-        }, 900);
+        }, 1000);
       });
     });
 });

@@ -1,6 +1,9 @@
+#! /usr/bin/env node
+
 const ReactRaise = require('./lib/ReactRaise');
 const speak = require('./lib/speak');
 const argv = require('minimist')(process.argv.slice(2));
+
 
 speak('React Raise', 'figlet');
 speak(
@@ -21,3 +24,4 @@ switch (argv._[0]) {
       'red'
       );
 }
+
