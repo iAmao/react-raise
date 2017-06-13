@@ -1,13 +1,14 @@
 {
+  "name": "new",
   "version": "1.0.0",
-  "description": "m",
-  "main": "m",
+  "description": "documan management system",
+  "main": "index.js",
   "scripts": {
     "test": ""
   },
   "keywords": [],
-  "author": "a",
-  "license": "I",
+  "author": "Inumidun",
+  "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.24.1",
