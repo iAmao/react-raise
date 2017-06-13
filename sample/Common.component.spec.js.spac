@@ -1,0 +1,13 @@
+/* global expect:true */
+/* global shallow:true */
+
+import React from 'react';//eslint-disable-line
+
+import Common from '../../src/components/common/Common.component';
+
+describe('<Common />', () => {
+  it('should have a Nav', () => {
+    const wrapper = shallow(<Common />);
+    expect(wrapper.find('nav')).to.have.length(1);
+  });
+});
