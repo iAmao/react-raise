@@ -3,7 +3,7 @@ module.exports = [
     src: [
       {
         components: [
-          { common: ['Button.component.jsx'] },
+          { common: ['Common.component.jsx'] },
           { static: ['About.component.jsx'] },
           'Routes.component.jsx',
           'Home.component.jsx'
@@ -12,6 +12,7 @@ module.exports = [
       { actions: ['actionTypes.js'] },
       { reducers: ['root.reducer.js'] },
       { utils: ['helper.js'] },
+      { styles: ['style.less', 'style.scss'] },
       'index.jsx',
       'store.js'
     ]
@@ -23,6 +24,15 @@ module.exports = [
       { vendor: ['vendor.txt'] },
       { images: ['images.txt'] },
       'index.html'
+    ]
+  },
+  {
+    test: [
+      { actions: ['actionTypes.spec.js'] },
+      { reducers: ['root.reducer.spec.js'] },
+      { components: ['Home.component.spec.js'] },
+      { e2e: ['e2e.txt'] },
+      'mocha-helper.js'
     ]
   }
 ];
