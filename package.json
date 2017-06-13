@@ -52,6 +52,7 @@
     "inquirer": "^3.1.0",
     "jsonfile": "^3.0.0",
     "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "touch": "^1.0.0"
   }
