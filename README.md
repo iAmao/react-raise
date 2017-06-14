@@ -1,5 +1,5 @@
 # react-raise
-[![Coverage Status](https://coveralls.io/repos/github/andela-iamao/react-raise/badge.svg)](https://coveralls.io/github/andela-iamao/react-raise) [![Build Status](https://travis-ci.org/andela-iamao/react-raise.svg?branch=master)](https://travis-ci.org/andela-iamao/react-raise) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-iamao/react-raise/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/andela-iamao/react-raise/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/andela-iamao/react-raise/badge.svg)](https://coveralls.io/github/andela-iamao/react-raise) [![Build Status](https://travis-ci.org/andela-iamao/react-raise.svg?branch=master)](https://travis-ci.org/andela-iamao/react-raise) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-iamao/react-raise/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/andela-iamao/react-raise/?branch=master) [![npm version](https://badge.fury.io/js/react-raise.svg)](https://badge.fury.io/js/react-raise)
 
 A cli kit for creating react applications
 
@@ -27,8 +27,9 @@ So basically, you can get up an running on your react project in about 10 second
 Open your terminal and type the following
 ```
 $ npm install -g react-raise
-$ #test installation
-$ react-raise --help
+$ raise new <app-name>
+$ npm install
+$ npm run start-dev
 ```
 
 ### Contributing
