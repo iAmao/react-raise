@@ -1,16 +1,15 @@
 /* global expect:true */
 /* global shallow:true */
-/* global mount:true */
 
 import React from 'react';//eslint-disable-line
 
-import Home from '../../src/components/Home.component';
+import Home from '../../src/components/Home.component.jsx';
 
 describe('<Home />', () => {
   it('should have a heading text', () => {
     const wrapper = shallow(
       <Home />
     );
-    expect(wrapper.find('.heading')).to.have.length(1);
+    expect(wrapper.props()).to.have.property('children');
   });
 });

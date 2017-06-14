@@ -4,7 +4,7 @@ module.exports = [
       {
         components: [
           { common: ['Common.component.jsx'] },
-          { static: ['About.component.jsx'] },
+          { static: ['About.component.jsx', 'NotFound.component.jsx'] },
           'Routes.component.jsx',
           'Home.component.jsx'
         ]
@@ -30,7 +30,13 @@ module.exports = [
     test: [
       { actions: ['actionTypes.spec.js'] },
       { reducers: ['root.reducer.spec.js'] },
-      { components: ['Home.component.spec.js'] },
+      { components: [
+        'Home.component.spec.js',
+        'About.component.spec.js',
+        'Common.component.spec.js',
+        'Routes.component.spec.js',
+        'NotFound.component.spec.js'
+      ] },
       { e2e: ['e2e.txt'] },
       'mocha-helper.js'
     ]

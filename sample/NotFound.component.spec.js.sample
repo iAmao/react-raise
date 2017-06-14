@@ -1,0 +1,15 @@
+/* global expect:true */
+/* global shallow:true */
+
+import React from 'react';//eslint-disable-line
+
+import NotFound from '../../src/components/static/NotFound.component.jsx';
+
+describe('<NotFound />', () => {
+  it('should have a heading text of h1', () => {
+    const wrapper = shallow(
+      <NotFound />
+    );
+    expect(wrapper.find('h1')).to.have.length(1);
+  });
+});

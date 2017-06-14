@@ -1,0 +1,14 @@
+/* global expect:true */
+/* global shallow:true */
+
+import React from 'react';//eslint-disable-line
+
+import Routes from '../../src/components/Routes.component.jsx';
+
+describe('<Routes />', () => {
+  it('should have the props for history and routes', () => {
+    const wrapper = shallow(<Routes />);
+    expect(wrapper.props()).to.have.property('history');
+    expect(wrapper.props()).to.have.property('routes');
+  });
+});

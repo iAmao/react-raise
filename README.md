@@ -27,8 +27,13 @@ So basically, you can get up an running on your react project in about 10 second
 Open your terminal and type the following
 ```
 $ npm install -g react-raise
+$ #test installation
 $ raise new <app-name>
 $ npm install
+$ npm run test:frontend
+$ # If you initialized with express
+$ node <entry.js>
+$ # Else
 $ npm run start-dev
 ```
 
