@@ -3,11 +3,13 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import Common from './common/Common.component';
 import Home from './Home.component';
 import About from './static/About.component';
+import NotFound from './static/NotFound.component';
 
 const routes = (
   <Route path="/" component={Common}>
     <IndexRoute component={Home} />
     <Route path="/about" component={About} />
+    <Route path="/*" component={NotFound} />
   </Route>
 );
 

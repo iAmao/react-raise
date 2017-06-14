@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import nock from 'nock';
 import faker from 'faker';
 import * as chai from 'chai';
-import spies from 'chai-spies';
 import sinon from 'sinon';
 import moxios from 'moxios';
 import { mount, shallow, render } from 'enzyme';
@@ -20,13 +19,11 @@ Object.keys(document.defaultView).forEach((property) => {
   }
 });
 
-chai.use(spies);
-
 global.window.localStorage = {
-  getItem: () => {
+  getItem() {
     return 'abc';
   }
-}
+};
 
 global.sinon = sinon;
 global.expect = chai.expect;
@@ -36,7 +33,6 @@ global.nock = nock;
 global.mount = mount;
 global.shallow = shallow;
 global.render = render;
-global.spy = spies;
 global.faker = faker;
 global.moxios = moxios;
 global.navigator = {

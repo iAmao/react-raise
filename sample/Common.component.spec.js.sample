@@ -1,0 +1,14 @@
+/* global expect:true */
+/* global mount:true */
+
+import React from 'react';//eslint-disable-line
+
+import Common from '../../src/components/common/Common.component.jsx';
+
+describe('<Common />', () => {
+  it('should render the child components', () => {
+    const wrapper = mount(<Common ><h3>Common</h3></Common>);
+    expect(wrapper.props().children.type).to.eql('h3');
+    expect(wrapper.props().children.props.children).to.eql('Common');
+  });
+});

@@ -110,6 +110,28 @@ describe('Generate', () => {
             });
         });
       });
+      it('should create a webpack.config.js file with express support', (done) => {
+        generate.webpack('y').then((config) => {
+          expect(baseDir.directoryExists(path.join(__dirname, '/example/webpack.config.js'))).to.eql(true);
+          fs.readFile(
+            path.join(__dirname, '../../sample/webpack.config.sample'),
+            (err, data) => {
+              if (err) {
+                return done(err);
+              }
+              let webpack = data.toString();
+              webpack = webpack.replace(
+                '\'webpack-dev-server/client?/\',',
+                '//\'webpack-dev-server/client?/\'');
+              webpack = webpack.replace(
+                'webpack/hot/dev-server',
+                'webpack-hot-middleware/client?reload=true');
+              // console.log(webpack);
+              expect(webpack).to.eql(config);
+              done();              
+            });
+        });
+      });
       it('should fail to create a webpack.config.js file if error occurs', (done) => {
         generate = new Generate('/ts/');
         generate.webpack().catch((err) => {
@@ -163,22 +185,62 @@ describe('Generate', () => {
       });
     });
 
-    describe('All', () => {
-      it('should create a .eslintrc, webpack.config.js, .babelrc, package.json', (done) => {
-        generate.all({
-          express: 'y',
-          author: 'Test',
-          main: 'main.js',
-          description: 'A test app',
-          name: 'test',
-          license: 'ISC'
-        }).then(() => {
-          expect(baseDir.directoryExists(path.join(__dirname, '/example/.eslintrc'))).to.eql(true);
-          expect(baseDir.directoryExists(path.join(__dirname, '/example/.babelrc'))).to.eql(true);
-          expect(baseDir.directoryExists(path.join(__dirname, '/example/webpack.config.js'))).to.eql(true);
-          expect(baseDir.directoryExists(path.join(__dirname, '/example/package.json'))).to.eql(true);
+    describe('Express', () => {
+      it('should create an express server file with sample setup info', (done) => {
+        generate.express('server.js').then((config) => {
+          expect(baseDir.directoryExists(path.join(__dirname, '/example/server.js'))).to.eql(true);
+          fs.readFile(
+            path.join(__dirname, '../../sample/express.sample'),
+            (err, data) => {
+              const express = data.toString();
+              expect(express).to.eql(config);
+              done();              
+            });
+        });
+      });
+      it('should fail to create an express server file if error occurs', (done) => {
+        generate = new Generate('/ts/');
+        generate.express('server.js').catch((err) => {
+          expect(err).to.have.property('errno');
           done();
         });
+      });
+    });
+
+    describe('All', () => {
+      it('should create a .eslintrc, webpack.config.js, .babelrc, package.json express server',
+        (done) => {
+          generate.all({
+            express: 'y',
+            author: 'Test',
+            main: 'main.js',
+            description: 'A test app',
+            name: 'test',
+            license: 'ISC'
+          }).then(() => {
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/.eslintrc'))).to.eql(true);
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/.babelrc'))).to.eql(true);
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/webpack.config.js'))).to.eql(true);
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/package.json'))).to.eql(true);
+            done();
+          });
+      });
+      it('should create a .eslintrc, webpack.config.js, .babelrc, package.json',
+        (done) => {
+          generate.all({
+            express: 'n',
+            author: 'Test',
+            main: 'main.js',
+            description: 'A test app',
+            name: 'test',
+            license: 'ISC'
+          }).then(() => {
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/.eslintrc'))).to.eql(true);
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/.babelrc'))).to.eql(true);
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/webpack.config.js'))).to.eql(true);
+            expect(baseDir.directoryExists(path.join(__dirname, '/example/package.json'))).to.eql(true);
+            done();
+          });
       });
       it('should fail to create webpack.config.js file if error occurs', (done) => {
         generate = new Generate('tst/lib');
