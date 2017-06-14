@@ -28,7 +28,13 @@ Open your terminal and type the following
 ```
 $ npm install -g react-raise
 $ #test installation
-$ react-raise --help
+$ raise new <app-name>
+$ npm install
+$ npm run test:frontend
+$ # If you initialized with express
+$ node <entry.js>
+$ # Else
+$ npm run start-dev
 ```
 
 ### Contributing
